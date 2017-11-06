@@ -19,7 +19,9 @@
 	        	<a href="{{ route('buy') }}">Comprar</a>
 	        </li>
 	        <li>
-	        	<a href="{{ route('logout') }}">Logout</a>
+	        	<a href="{{ url('/logout') }}">
+	        		Logout
+	        	</a>
 	        </li>
 	    @endif
     </ul>

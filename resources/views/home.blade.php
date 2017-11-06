@@ -3,10 +3,11 @@
 @section('content')
     @include('partials.mains.nav')
     <div class="container">
-        <h1>
-            Produtos cadastrados
-        </h1>
+        
         @if(\Auth::check())
+            <h1>
+                Produtos cadastrados
+            </h1>
             @foreach($products as $product)
                 <a href="{{ route("products/detail", ["id" => $product->id]) }}" class="container__card">
                     <div class="container__card__user">
@@ -16,10 +17,6 @@
                             Teste Usuario
                         </span>
                     </div>
-                    {{--<div class="container__card__name">--}}
-                    {{--Teste De Boi--}}
-                    {{--</div>--}}
-                    {{-- Prod IMG --}}
                     <img src="{!! asset('public/uploads/' . $product->image) !!}">
                     <div class="container__card__info">
                         <h3>
@@ -33,8 +30,9 @@
             @endforeach
         @else
             <div>
-            Bem vindo!<br/>
-            Registre-se.
+                Bem vindo!
+                <br/>
+                Registre-se.
             </div>
         @endif
     </div>

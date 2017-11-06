@@ -39,6 +39,21 @@ a:active {
     height: 100%;
     padding-right: 10px;
     padding-left: 10px; }
+  .header__dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+    z-index: auto; }
+  .header__link {
+    display: none;
+    top: 17px;
+    position: absolute;
+    background-color: #F3F3F3;
+    min-width: 60px;
+    max-width: 90px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 0; }
 
 .container {
   padding-top: 50px;
