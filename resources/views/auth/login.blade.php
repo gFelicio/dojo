@@ -1,6 +1,7 @@
 @extends('auth.app')
 
 @section('content')
+    @include('partials.mains.nav')
     <div class="container">
         <h1>
             LOGIN

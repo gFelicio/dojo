@@ -4,11 +4,13 @@
 
 // Variables
 @import "variables";
-$color-one: #004358;
-$color-two: #1F8A70;
-$color-three:#BEDB39;
+$color-one: #CED4D6;
+$color-two: #95A2A5;
+$color-three:#00AEBB;
+$color-four: #002B49;
 
-@mixin padding-top {
+@mixin padding-top
+{
   padding-top: 50px;
 }
 
@@ -16,7 +18,8 @@ $color-three:#BEDB39;
   margin-top: 20px;
 }
 
-* {
+*
+{
   text-decoration: none;
   list-style: none;
   margin: 0;
@@ -24,13 +27,43 @@ $color-three:#BEDB39;
   box-sizing: border-box;
   font-family: Arial,Helvetica,sans-serif;
 }
-body{
-  background-color: $color-two;
+
+body
+{
+  background-color: $color-one;
 }
 
-.header {
+a:link
+{
+  color:       #000;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited
+{
+  color:       #000;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover
+{
+  color:       $color-one;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active
+{
+  color:         white;
+  text-decoration: underline;
+}
+
+.header
+{
   height: 45px;
-  background-color: $color-three;
+  background-color: $color-two;
   ul {
     display: flex;
     justify-content: space-around;
@@ -67,12 +100,12 @@ body{
       &__item{
         margin: 5px;
         margin-top: 10px;
-        input[type="file"]{
+        /*input[type="file"]{
           display: none;
-        }
-        label[for="image"]{
+        }*/
+        /*label[for="image"]{
           @extend .button;
-        }
+        }*/
       }
     }
   &__card {
@@ -113,10 +146,10 @@ body{
         padding: 5px 0 5px 0;
       }
       h3{
-        color: $color-one;
+        color: $color-four;
       }
       h4{
-        color: $color-two;
+        color: $color-three;
       }
     }
   }
@@ -142,10 +175,19 @@ button, .button{
   padding: 2px;
   width: 90px;
   height: 25px;
-  background-color: $color-three;
+  background-color: $color-two;
 }
 
-//Some code
+.helper{
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  &__text{
+    background-color: #FF0000;
+  }
+}
+
+/*//Some code*/
 
 
 

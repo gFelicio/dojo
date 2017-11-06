@@ -13,10 +13,15 @@
 
 Auth::routes();
 
+Route::get('logout', 'Auth\LoginController@logout');
+
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/add', 'ProductController@add')->name('products');
 
 Route::post('products/store', 'ProductController@store')->name('products/store');
+
 Route::get('products/{id}', 'ProductController@detail')->name('products/detail');
+
+Route::get('/buy', 'ProductController@list')->name('buy');
 

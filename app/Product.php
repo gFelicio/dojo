@@ -14,4 +14,9 @@ class Product extends Model
         "date_end",
         "image"
     ];
+
+    public function user()
+    {
+    	return $this->belongsTo('App\User', 'userID', 'id');
+    }
 }

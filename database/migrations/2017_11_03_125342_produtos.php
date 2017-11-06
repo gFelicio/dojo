@@ -15,12 +15,14 @@ class Produtos extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('userID')->unsigned()->nullable();
+            $table->foreign('userID')->references('id')->on('users');
             $table->string('title');
             $table->text('description');
             $table->float('price');
             $table->float('bid');
             $table->dateTime('date_end');
-            $table->text('image');
+            $table->string('image');
             $table->timestamps();
         });
         //

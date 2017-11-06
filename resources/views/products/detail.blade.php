@@ -2,6 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('partials.mains.nav')
     <div class="container">
         <div class="container__card">
             {{--<div class="container__card__name">--}}
@@ -16,7 +17,7 @@
             <div class="container__card__info">
                 <h3>{{ $product->title }}</h3>
                 <h4>R${{ $product->price }}</h4>
-                <a class="container__img"><img src="https://github.com/AndreLJS/projetos_cursos/blob/master/projeto_inicial_gulp/app/images/lance1.png?raw=true"></a>
+                <a class="container__img"><img src="{!! asset('public/uploads/' . $product->image) !!}"></a>
             </div>
             <span>{{ $product->description }}</span>
         </div>
